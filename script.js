@@ -1,22 +1,27 @@
-const button = document.querySelectorAll(".numberBtn")
-const calcBtn = document.querySelectorAll(".calcBtn")
-
-
+const buttons = document.querySelectorAll("#btn")
+const display = document.querySelector(".screen")
+const equal = document.querySelector("#equalBtn")
+const clear = document.querySelector("#clearBtn")
+let output = ""
+let previousValue;
+let currentValue;
 let num1;
-let operator;
 let num2;
 
-button.forEach(button => {
-    button.addEventListener('click' , (e) => {
-        console.log(e.target.id)
+
+
+
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        let currentValue = e.target.dataset.value
+        display.value += currentValue
     })
 })
 
-calcBtn.forEach(button => {
-    button.addEventListener('click', (e) => {
-        console.log(e.target.id)
-    })
-})
+
+function operate(){
+
+}
 
 
 
