@@ -1,3 +1,5 @@
+
+
 let operator = '';
 let previousValue = '';
 let currentValue = '';
@@ -17,12 +19,14 @@ numbers.forEach((number) => number.addEventListener('click', (e) => {
     handleNumber(e.target.textContent)
     currentScreen.textContent = currentValue
 }))
+
 operators.forEach((op) => op.addEventListener('click', (e) => {
     handleOperator(e.target.textContent)
     previousScreen.textContent = previousValue + ' ' + operator;
     currentScreen.textContent = currentValue
 }))
-clear.addEventListener('click' , (e) => {
+
+clear.addEventListener('click' , () => {
     previousValue = ''
     currentValue = ''
     operator = ''
